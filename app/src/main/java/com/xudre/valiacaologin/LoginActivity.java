@@ -108,7 +108,10 @@ public class LoginActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(email)) return 10;
 
         // Aqui verificamos se o e-mail tem um padrão esperado:
-        Pattern emailRegex = Pattern.compile("^[a-z0-9._-]+@([a-z0-9]+\\.)+[a-z0-9]+$", Pattern.CASE_INSENSITIVE);
+        Pattern emailRegex = Pattern.compile(
+            "^[a-z0-9._-]+@([a-z0-9]+\\.)+[a-z0-9]+$",
+            Pattern.CASE_INSENSITIVE
+        );
 
         if (emailRegex.matcher(email).matches() == false) return 11;
 
@@ -164,7 +167,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (focus == null) return;
 
-        InputMethodManager manager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         manager.hideSoftInputFromWindow(focus.getWindowToken(), 0);
     }
