@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Valiação Login</string>
+    <string name="app_name">Validação Login</string>
 
     <string name="login_email_hint">Seu e-mail aqui</string>
     <string name="login_senha_hint">Sua senha aqui</string>
