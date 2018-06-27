@@ -168,6 +168,8 @@ public class LoginActivity extends AppCompatActivity {
         if (focus == null) return;
 
         InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        
+        if (manager == null) return;
 
         manager.hideSoftInputFromWindow(focus.getWindowToken(), 0);
     }
